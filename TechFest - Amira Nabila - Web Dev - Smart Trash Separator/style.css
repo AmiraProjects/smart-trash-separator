@@ -1,0 +1,685 @@
+nav {
+  position: absolute;
+  right: 0;
+  display: flex;
+  padding: 15px;
+}
+.main-header {
+  /* background-color: darkblue; */
+  background-color: greenyellow;
+  padding-left: 10px;
+  /* padding-top: 3px;
+    padding-bottom: 3px; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  z-index: 100;
+}
+.info-header {
+  text-align: left;
+  color: darkgreen;
+  padding: 0px;
+  margin: 14px;
+  position: absolute;
+  left: 0px;
+  font-family: "Poetsen One", sans-serif;
+}
+.info-header a {
+  padding-left: 50px;
+  text-decoration: none;
+  color: white;
+}
+
+.info-header a:hover {
+  background-color: transparent;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  padding-left: 10px;
+  color: darkgreen;
+}
+
+main {
+  margin-top: 60px;
+}
+
+footer {
+  /* background-color: darkblue; */
+  background-image: linear-gradient(to bottom, green, lightgreen);
+  color: snow;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.left-footer {
+  margin-left: 40px;
+  margin-right: auto;
+}
+
+.right-footer {
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.center-footer {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.info-left {
+  color: snow;
+  text-align: left;
+  width: 100%;
+}
+
+.info-right {
+  color: snow;
+  text-align: right;
+  width: 100%;
+}
+
+.info-center {
+  color: snow;
+  text-align: center;
+  width: 100%;
+  padding-top: 5px;
+  border-top: 1px solid lime;
+}
+
+@media (max-width: 600px) {
+  * {
+    font-size: 2vw;
+    margin: 2px;
+  }
+}
+
+main {
+  margin-top: 60px;
+}
+
+#jumbotron {
+  width: 100%;
+}
+.jumbotron {
+  padding: 20px;
+  text-align: center;
+  background-color: darkgreen;
+}
+
+.jumbotron-title {
+  color: chartreuse;
+  font-size: 30px;
+  padding-bottom: 20px;
+  font-family: "Poetsen One", sans-serif;
+}
+.jumbotron-text {
+  color: rgb(224, 251, 252);
+  text-align: left;
+  padding-bottom: 20px;
+  border-bottom: 8px solid brown;
+  font-family: "Tillana", system-ui;
+  font-weight: 800;
+}
+
+.jumbotron-img {
+  height: 300px;
+  z-index: 10;
+}
+
+.mini-text-flex {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Marck Script", cursive;
+  font-weight: 600;
+  font-size: large;
+  z-index: 20;
+}
+.mini-text {
+  color: rgb(224, 251, 252);
+  text-align: left;
+  margin-right: 5px;
+  z-index: 50;
+}
+.icon-down {
+  display: none;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+aside {
+  max-width: 100%;
+  max-height: 800px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px gainsboro;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  background-color: linen;
+}
+.aside-title {
+  margin-top: 30px;
+  font-size: 25px;
+  font-family: "Poetsen One", sans-serif;
+}
+input {
+  width: 50%;
+  border: none;
+  background-color: lawngreen;
+  border: 2px solid lawngreen;
+  height: 40px;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+}
+.addBtn {
+  width: 50%;
+  padding: 6px;
+  background-color: darkgreen;
+  margin: 0;
+  cursor: pointer;
+  color: snow;
+  height: 40x;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.input-tag {
+  text-align: center;
+  margin-top: 50px;
+}
+.title {
+  text-align: center;
+  font-family: "Poetsen One", sans-serif;
+}
+.search-tags-item {
+  margin: 5px;
+  padding: 10px;
+  background-color: darkblue;
+  color: snow;
+  text-align: left;
+}
+ul {
+  list-style-type: none;
+  padding: 10px;
+}
+.section-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.image-slider {
+  position: relative;
+  width: 640px;
+  height: 426px;
+  z-index: 10;
+}
+.slide {
+  width: 100%;
+  position: absolute;
+  clip-path: circle(0% at 0 50%);
+}
+.slide img {
+  width: 100%;
+  border-radius: 15px;
+}
+.slide-text {
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+  background-color: rgba(220, 220, 220, 0.609);
+  padding: 15px;
+  border-radius: 10px;
+}
+.slide-text h2 {
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+  font-family: "Poetsen One", sans-serif;
+  color: green;
+}
+.slide-text p {
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  font-family: "Marck Script", cursive;
+  font-weight: 600;
+  font-size: large;
+}
+.navigation {
+  position: absolute;
+  display: flex;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slider-btn {
+  background-color: lightgreen;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.slide.active {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+  transition-property: clip-path;
+}
+.slider-btn.active {
+  background-color: darkgreen;
+}
+#slider {
+  margin-bottom: 100px;
+}
+.slider-title {
+  text-align: center;
+  font-size: x-large;
+  font-family: "Poetsen One", sans-serif;
+}
+#icon {
+  margin-right: 10px;
+}
+.wave1 {
+  position: absolute;
+  top: 500px;
+  z-index: 3;
+}
+.container-tab {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: center;
+}
+.tab {
+  background-image: linear-gradient(to bottom, lawngreen, limegreen);
+  width: 300px;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px gainsboro;
+}
+.name {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: black;
+  font-family: "Tillana", system-ui;
+}
+.description {
+  font-family: "Marck Script", cursive;
+  font-weight: 600;
+  font-size: large;
+  color: black;
+}
+.list {
+  list-style-type: square;
+  margin-bottom: 50px;
+  text-align: left;
+}
+.list li {
+  margin-top: 20px;
+  color: black;
+}
+#RRR {
+  margin-top: 200px;
+}
+hr {
+  height: 7px;
+  width: 80%;
+  margin: auto;
+  background-color: snow;
+  border: none;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+.tab-title {
+  text-align: center;
+  font-family: "Poetsen One", sans-serif;
+}
+.tab-desc {
+  text-align: center;
+  font-family: "Marck Script", cursive;
+  font-weight: 600;
+  font-size: larger;
+}
+.contact {
+  display: inline-block;
+  margin: 10px 30px;
+  text-align: center;
+}
+.contact h1 {
+  font-family: "Tillana", system-ui;
+  color: green;
+}
+.profile-contact-img {
+  width: 250px;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.input-container {
+  display: flex;
+  /* justify-content: center; */
+  align-items: flex-start;
+}
+.icon {
+  margin-right: 6px;
+}
+.fa-user,
+.fa-map-marker-alt,
+.fa-envelope-open,
+.fa-comment {
+  font-size: 27px;
+  color: green;
+}
+.form-label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.form-input {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  outline: none;
+  height: 48px;
+  margin-bottom: 15px;
+  padding: 0;
+  margin-left: 50px;
+}
+.input-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-style: none;
+  outline: 0;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  height: 100%;
+}
+.textarea-container {
+  display: flex;
+  justify-content: center;
+}
+.form-textarea {
+  position: relative;
+}
+textarea {
+  border-style: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  margin-top: 10px;
+}
+.submit {
+  border-style: none;
+  border-radius: 0;
+  background-color: seagreen;
+  margin-bottom: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: large;
+  padding: 10px;
+  border-radius: 10px;
+}
+.input-item:focus + .form-label {
+  top: -5px;
+  left: -2px;
+  font-size: 10px;
+}
+textarea:focus + .form-label {
+  top: -5px;
+  left: -2px;
+  font-size: 10px;
+}
+.input-item:not(:placeholder-shown).input-item:not(:focus) + .form-label {
+  top: -2px;
+  left: -2px;
+  font-size: 10px;
+  color: black;
+}
+textarea:not(:placeholder-shown).textarea:not(:focus) + .form-label {
+  top: -2px;
+  left: -2px;
+  font-size: 10px;
+  color: black;
+}
+.contact-container {
+  display: flex;
+  justify-content: flex-start;
+}
+.illustration-img {
+  margin: 0;
+  width: 700px;
+}
+.modal-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: skyblue;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 1s,
+    opacity 1s;
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+.modal {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  background-color: lightgreen;
+  padding: 35px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+}
+.modal p {
+  margin: 20px 0;
+  padding: 0;
+  font-size: 15px;
+}
+.modal img {
+  display: block;
+  margin: 0 auto 0 auto;
+  padding: 0;
+  width: 300px;
+}
+.section-container {
+  text-align: center;
+  padding: 10px;
+}
+.section-title {
+  font-size: 40px;
+  margin: 50px 0 0;
+  font-family: "Poetsen One", sans-serif;
+  color: snow;
+}
+.section-subtitle {
+  font-size: 15px;
+  color: snow;
+  margin: 10px 0 0;
+}
+.about-flex-item {
+  display: block;
+  color: snow;
+}
+.about-image {
+  margin: 0;
+}
+.blob-image {
+  width: 400px;
+  height: auto;
+  transform: rotate(-90deg);
+}
+.blogger-image {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  left: 480px;
+  top: 270px;
+}
+.about-description p {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 2px;
+  color: snow;
+}
+.about-description h4 {
+  color: snow;
+  letter-spacing: 2px;
+}
+.faq {
+  text-align: center;
+  font-family: "Poetsen One", sans-serif;
+  color: darkgreen;
+}
+.article {
+  margin: 50px 30px 100px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 5px grey;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.article-img {
+  margin: 5px;
+}
+.article-img img {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+}
+.answer {
+  margin: 5px;
+}
+.answer h3 {
+  margin: 0 5px 5px;
+  padding: 0;
+  font-size: 23px;
+  font-family: "Tillana", system-ui;
+  color: seagreen;
+}
+.answer p {
+  margin: 20px 5px;
+  padding: 0;
+  line-height: 1.8;
+  text-indent: 40px;
+}
+.highlights {
+  color: green;
+  font-family: "Marck Script", cursive;
+  font-weight: 600;
+}
+#faqs {
+  margin-top: 50px;
+}
+.reveal {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s;
+}
+.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.ai-classifier-container {
+  text-align: center;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #f4f9f4;
+  border-radius: 12px;
+  box-shadow: 0 0 15px gainsboro;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+/* Fix the file picker input so it doesn't stretch */
+.ai-classifier-container input[type="file"] {
+  width: auto;
+  background-color: transparent;
+  border: 2px dashed lawngreen;
+  height: auto;
+  text-align: left;
+}
+.ai-classifier-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+#classifyBtn {
+  padding: 10px 25px;
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Poetsen One", sans-serif;
+  transition: background-color 0.3s;
+}
+
+#classifyBtn:hover:not(:disabled) {
+  background-color: seagreen;
+}
+
+#classifyBtn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+#resultText {
+  font-family: "Tillana", system-ui;
+  font-weight: 600;
+  font-size: 16px;
+  color: darkgreen;
+  margin: 0;
+}
+
+.ai-classifier-container input[type="file"] {
+  width: auto;
+  background-color: transparent;
+  border: 2px dashed lawngreen;
+  height: auto;
+  text-align: left;
+}

@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/f90068558c.js"
+      crossorigin="”anonymous”"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Poetsen+One&family=Tillana:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Load TensorFlow.js and Teachable Machine Image Model Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.1/dist/mobilenet.min.js"></script> -->
+
+    <!-- Load Transformers.js for browser-based text classification -->
+    <script src="https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.0"></script>
+  </head>
+  <body>
+    <header>
+      <div class="main-header">
+        <h3 class="info-header">
+          <i class="fa-solid fa-earth-americas" id="icon"></i>Smart Trash
+          Separator
+        </h3>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="contact.html">Contacts</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </header>
+    <main
+      style="
+        background-image: url(assets/bg\ 1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+      "
+    >
+      <section id="jumbotron">
+        <div class="jumbotron">
+          <h1 class="jumbotron-title">Smart Trash Separator</h1>
+          <div class="header-flex">
+            <div>
+              <h2 class="jumbotron-text">
+                Did you know? <br />
+                There are <span style="color: lawngreen">tons</span> of trashes
+                produced each year
+              </h2>
+              <div class="mini-text-flex">
+                <p class="mini-text">
+                  The world produces around 350 million tonnes of plastic waste
+                  each year. A recent high-quality studies suggest between 1 or
+                  2 million tonnes of plastic enters the ocean annually. <br />
+                  <span style="color: lawngreen"
+                    >So, how do we reduce this?</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div>
+              <img
+                onmouseover="changeImage(this)"
+                onmouseout="changeImageBack(this)"
+                class="jumbotron-img"
+                src="assets/gunung sampah.jpg"
+                alt=""
+                width="auto"
+                height="300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        class="wave1"
+      >
+        <path
+          fill="#006600"
+          fill-opacity="1"
+          d="M0,192L40,192C80,192,160,192,240,181.3C320,171,400,149,480,149.3C560,149,640,171,720,154.7C800,139,880,85,960,85.3C1040,85,1120,139,1200,176C1280,213,1360,235,1400,245.3L1440,256L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
+        ></path>
+      </svg>
+
+      <section id="RRR">
+        <h2 class="tab-title">3R's</h2>
+        <p class="tab-desc">
+          3R (Reduce, Reuse & Recycle) is the simplest way you can do to
+          minimize our trash production rate!
+        </p>
+        <div class="container-tab">
+          <div class="tab reveal">
+            <div class="tab-header">
+              <div>
+                <h1 class="name">Reduce</h1>
+              </div>
+              <div>
+                <p class="description">
+                  Reduce itself means to make something smaller or less in
+                  amount, degree or size!
+                </p>
+              </div>
+            </div>
+            <hr />
+            <ul class="list">
+              <h3>How?</h3>
+              <li>
+                Buy stuffs you only need. Make sure you don't overconsume
+                something.
+              </li>
+              <li>Try to compost food waste & other organic materials.</li>
+              <li>
+                If you have something that you don't use, donate them to people
+                in need so they can use it again.
+              </li>
+            </ul>
+          </div>
+          <div class="tab reveal">
+            <div class="tab-header">
+              <div>
+                <h1 class="name">Reuse</h1>
+              </div>
+              <div>
+                <p class="description">
+                  According to Oxford Language, Reuse is an action on using
+                  something more than once!
+                </p>
+              </div>
+            </div>
+            <hr />
+            <ul class="list">
+              <h3>How?</h3>
+              <li>
+                When going shopping, use a reusable shopping bags made from
+                cloth. Avoid using paper bags as it can only be used once.
+              </li>
+              <li>
+                Convert old clothes or towels you don't use into a cleaning rag.
+              </li>
+              <li>
+                Try to bring your own tumblers or water bottle instead of using
+                plastic bottle.
+              </li>
+              <li>
+                Do not throw away unused papers, you can still reuse them to
+                wrap gifts or use the empty space to write something.
+              </li>
+            </ul>
+          </div>
+          <div class="tab reveal">
+            <div class="tab-header">
+              <div>
+                <h1 class="name">Recycle</h1>
+              </div>
+              <div>
+                <p class="description">
+                  Recycling is the process of collecting and processing
+                  materials that would be thrown away as trashes into a new
+                  product!
+                </p>
+              </div>
+            </div>
+            <hr />
+            <ul class="list">
+              <h3>What Are Materials That Can Be Recycled?</h3>
+              <li>Glass</li>
+              <li>Paper</li>
+              <li>Plastics</li>
+              <li>Dry organic waste</li>
+              <li>Aluminium</li>
+              <li>
+                You can give those trashes to an organization for them to
+                recycle into a useful products!
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="slider-title">Let's Learn More About Recycling!</h2>
+      <section id="slider" class="section-slider">
+        <div class="image-slider">
+          <div class="slide active">
+            <img src="assets/ecobrick.jpg" alt="" width="auto" height="400px" />
+            <div class="slide-text">
+              <h2>
+                <a
+                  href="https://youtu.be/MQYsXxHKgMk?si=uOHpymB7ErI7DLx8"
+                  target="_blank"
+                  >Ecobricks!</a
+                >
+              </h2>
+              <p>Materials : Empty bottle, trashes, rope</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img
+              src="assets/recycled bag.jpg"
+              alt=""
+              width="auto"
+              height="400px"
+            />
+            <div class="slide-text">
+              <h2>
+                <a
+                  href="https://youtu.be/4r9tLvMVIKM?si=uB0ZZaMiLrraslBb"
+                  target="_blank"
+                  >Bags from Used Plastic!</a
+                >
+              </h2>
+              <p>Materials : Plastic bag, glue, scissors, decorations</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="assets/recycled case.jpg" alt="" />
+            <div class="slide-text">
+              <h2>
+                <a
+                  href="https://youtu.be/WTJSyekYEcU?si=S32FltKd4mweWmC0"
+                  target="_blank"
+                  >Pencil Case from Household Trash</a
+                >
+              </h2>
+              <p>
+                Materials : Plastic bottle/can, glue, scissors, decorations,
+                origami, cardboard
+              </p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="assets/recycled paper.jpg" alt="" />
+            <div class="slide-text">
+              <h2>
+                <a
+                  href="https://youtu.be/Ow5LeG-zzyg?si=kCO5MybXY7kJPt0e"
+                  target="_blank"
+                >
+                  Used Papers into New Papers!</a
+                >
+              </h2>
+              <p>
+                Materials : Old papers, water, blender, old frame, mesh/screen,
+                cloth/sponge, rectangle pan, decorations (optional)
+              </p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="assets/recycled pot.jpg" alt="" />
+            <div class="slide-text">
+              <h2>
+                <a
+                  href="https://youtu.be/pdDs1bWLKsM?si=lH-J7RIs59Ud_rrH"
+                  target="_blank"
+                  >Pot from Plastic Bottle</a
+                >
+              </h2>
+              <p>
+                Materials : Plastic bottle, origami paper, glue, scissors, paint
+              </p>
+            </div>
+          </div>
+
+          <div class="navigation">
+            <div class="slider-btn active"></div>
+            <div class="slider-btn"></div>
+            <div class="slider-btn"></div>
+            <div class="slider-btn"></div>
+            <div class="slider-btn"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="main-content">
+        <h2 class="title">Separating your Trashes into the Right Trash Bin!</h2>
+        <h2 class="title">Let's Try It!</h2>
+        <div class="input-tag">
+          <input id="userInput" type="text" placeholder="Type your trash..." />
+          <span class="addBtn" onclick="trash()">Go</span>
+        </div>
+        <div class="ai-classifier-container">
+          <input type="file" id="imageSelector" accept="image/*" />
+          <img id="uploadedImage" width="300" crossorigin="anonymous" />
+          <button id="classifyBtn" enabled>Classify Trash</button>
+          <p id="resultText">Status: Model loading...</p>
+        </div>
+        <div class="container">
+          <aside class="organic">
+            <h4 class="aside-title">Organic Trash Bin</h4>
+            <ul id="organicUl" class="organic-trash-item"></ul>
+            <img
+              src="assets/tempat sampah organik 1.png"
+              alt=""
+              width="auto"
+              height="300px"
+              onmouseover="changeImageOrganic(this)"
+              onmouseout="changeImageBackOrganic(this)"
+            />
+          </aside>
+          <aside class="inorganic">
+            <h4 class="aside-title">Inorganic Trash Bin</h4>
+            <ul id="inorganicUl" class="inorganic-trash-item"></ul>
+            <img
+              src="assets/tempat sampah inorganik.png"
+              alt=""
+              width="auto"
+              height="300px"
+              onmouseover="changeImageInorganic(this)"
+              onmouseout="changeImageBackInorganic(this)"
+            />
+          </aside>
+          <aside class="metal">
+            <h4 class="aside-title">Metal Trash Bin</h4>
+            <ul id="metalUl" class="metal-trash-item"></ul>
+            <img
+              src="assets/tempat sampah metal.png"
+              alt=""
+              width="auto"
+              height="300px"
+              onmouseover="changeImageMetal(this)"
+              onmouseout="changeImageBackMetal(this)"
+            />
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="center-footer">
+        <div class="main-footer">
+          <div class="left-footer">
+            <h3 class="info-left">
+              <i class="fas fa-map-marked-alt"></i><b>Adress</b>
+            </h3>
+            <p class="info-left"><i class="fas fa-map-pin"></i>Indonesia</p>
+          </div>
+
+          <div class="right-footer">
+            <h3 class="info-right">
+              <i class="fas fa-address-book"></i><b>Contacts</b>
+            </h3>
+            <p class="info-right">
+              <i class="fab fa-whatsapp"></i>Phone : 0812-9145-6158
+            </p>
+            <p class="info-right">
+              <i class="fab fa-instagram"></i>Instagram : @amira_b_aja
+            </p>
+          </div>
+        </div>
+
+        <div class="main-footer">
+          <p class="info-center">Copyright &copy; 2024 Made by Amira</p>
+        </div>
+      </div>
+    </footer>
+    <script src="//unpkg.com/browse/aos@3.0.0-beta.6/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
